@@ -38,4 +38,10 @@ void tmr_wait_period(int timer){
     
     IFS0bits.T1IF = 0; // Pulisci il flag di interrupt di Timer 1
     T1CONbits.TON = 0;
+    
+    //tmr_setup_period(timer, 200);
+}
+
+void tmr_wait_ms(int timer, int ms){
+    
 }
