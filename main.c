@@ -21,7 +21,9 @@ int main(void) {
     
     while (1) {
         // code to blink LED
-        if(status == 0){
+        /*
+         Assignment 1
+         if(status == 0){
             LATAbits.LATA0 = 1;
             status = 1;
         } else{
@@ -29,6 +31,12 @@ int main(void) {
             status = 0;
         }
         tmr_wait_period(TIMER1);
+         */
+        
+        LATAbits.LATA0 = 1;
+        tmr_wait_ms(TIMER2, 20);
+        LATAbits.LATA0 = 0;
+        tmr_wait_ms(TIMER2, 200);
     }
     return 0;
 }
