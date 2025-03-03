@@ -17,7 +17,7 @@ int main(void) {
     LATAbits.LATA0 = 0;
     int status = 0;
     
-    //tmr_setup_period(TIMER1, 200);
+    tmr_setup_period(TIMER1, 200);
     
     while (1) {
         // code to blink LED
@@ -28,7 +28,6 @@ int main(void) {
             LATAbits.LATA0 = 0;
             status = 0;
         }
-        tmr_setup_period(TIMER1, 200);
         tmr_wait_period(TIMER1);
     }
     return 0;
